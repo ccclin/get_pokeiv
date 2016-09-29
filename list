@@ -1,0 +1,7 @@
+        Prefix Verb URI Pattern          Controller#Action
+          root GET  /                    homes#show
+         homes GET  /homes(.:format)     homes#index
+         pokes GET  /pokes(.:format)     pokes#index
+               POST /pokes(.:format)     pokes#create
+          poke GET  /pokes/:id(.:format) pokes#show
+api_home_index GET  /api/home(.:format)  api/home#index {:format=>"json"}
