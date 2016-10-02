@@ -4,6 +4,7 @@ node :pokes do
     next if poke['pokemon_id'].to_sym == KeyValues::PokeInfo.find_by(code: :MISSINGNO).code
     {
       name: KeyValues::PokeInfo.find_by(code: poke['pokemon_id'].to_sym).tw_name,
+      pid: poke['pid'],
       cp: poke['cp'],
       iv: poke['iv'],
       individual_attack: poke['individual_attack'],

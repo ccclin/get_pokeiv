@@ -16,6 +16,7 @@ class PokesController < ApplicationController
     rescue Exception => e
       @alert = 'invalid code'
       render 'homes/index'
+      return
     end
     render :index
   end

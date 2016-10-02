@@ -32,10 +32,11 @@ var PokeIndex = React.createClass({
           <div className="ui cards">
             {
               this.state.pokes.map(function (poke, id) {
+                var new_id = ("00" + poke.pid).slice(-3);
                 return (
                   <div key={id} className="card">
                     <div className="content">
-                      {/*<img className="right floated mini ui image" src="/images/avatar/large/elliot.jpg">*/}
+                      <img className="right floated mini ui image" src={'/poke_img/' + new_id + '.png'}></img>
                       <div className="header">
                         {poke.name}
                       </div>
