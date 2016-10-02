@@ -66,7 +66,7 @@ gem 'awesome_rails_console'
 gem 'react-rails'
 # gem 'bootstrap-sass'
 gem 'font-awesome-rails'
-gem "semantic-ui-sass", github: "doabit/semantic-ui-sass"
+gem 'semantic-ui-sass'
 
 # api
 gem 'rabl'
