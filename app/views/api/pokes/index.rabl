@@ -15,3 +15,7 @@ node :pokes do
     }
   end.compact
 end
+
+node :sort do
+  @sort
+end
