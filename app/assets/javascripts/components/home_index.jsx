@@ -1,4 +1,5 @@
 var HomeIndex = React.createClass({
+  mixins: [LoadPage],
 
   getInitialState: function () {
     return {
@@ -10,15 +11,6 @@ var HomeIndex = React.createClass({
   componentDidMount: function() {
     this.loadPage(this.props.source);
     document.title = "GetPokeIV";
-  },
-
-  loadPage: function(url) {
-    $.get(url, function(result) {
-      var getResult = result;
-      if (this.isMounted()) {
-        this.setState(getResult);
-      }
-    }.bind(this));
   },
 
   render: function() {
