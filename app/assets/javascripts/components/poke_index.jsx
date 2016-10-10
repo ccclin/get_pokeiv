@@ -1,4 +1,5 @@
 var PokeIndex = React.createClass({
+  mixins: [LoadPage],
 
   getInitialState: function () {
     return {
@@ -10,18 +11,6 @@ var PokeIndex = React.createClass({
   componentDidMount: function() {
     this.loadPage(this.props.source);
     document.title = "GetPokeIV";
-  },
-
-  loadPage: function(url) {
-    $.get(url, function(result) {
-      var getResult = result;
-      if (this.isMounted()) {
-        this.setState({
-          pokes: getResult.pokes,
-          sort: getResult.sort
-        });
-      }
-    }.bind(this));
   },
 
   buttonOnClick: function(e){

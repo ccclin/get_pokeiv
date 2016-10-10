@@ -1,9 +1,10 @@
-var Index = React.createClass({
+var HomeIndex = React.createClass({
+  mixins: [LoadPage],
 
   getInitialState: function () {
     return {
       google_url: '',
-      params: {}
+      get_params: {}
     };
   },
 
@@ -12,21 +13,9 @@ var Index = React.createClass({
     document.title = "GetPokeIV";
   },
 
-  loadPage: function(url) {
-    $.get(url, function(result) {
-      var getResult = result;
-      if (this.isMounted()) {
-        this.setState({
-          google_url: getResult.google_url,
-          params: getResult.get_params
-        });
-      }
-    }.bind(this));
-  },
-
   render: function() {
-    var params = this.state.params;
-    var url_string = Object.keys(this.state.params).map(function(key) {
+    var params = this.state.get_params;
+    var url_string = Object.keys(this.state.get_params).map(function(key) {
       return key + '=' + params[key]
     }).join('&');
 
