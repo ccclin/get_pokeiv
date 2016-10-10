@@ -16,10 +16,7 @@ var PokeIndex = React.createClass({
     $.get(url, function(result) {
       var getResult = result;
       if (this.isMounted()) {
-        this.setState({
-          pokes: getResult.pokes,
-          sort: getResult.sort
-        });
+        this.setState(getResult);
       }
     }.bind(this));
   },
