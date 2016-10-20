@@ -45,6 +45,7 @@ var PokeIndex = React.createClass({
             <button id="pid" className="ui button" onClick={this.buttonOnClick}>ID</button>
             <button id="cp" className="ui button" onClick={this.buttonOnClick}>CP</button>
             <button id="iv" className="ui button" onClick={this.buttonOnClick}>IV</button>
+            <button id="creation_time_ms" className="ui button" onClick={this.buttonOnClick}>TIME</button>
           </div>
           <br/>
           <br/>
