@@ -19,10 +19,10 @@ class Api::PokesController < ApplicationController
   end
 
   def order_type
-    params[:type].blank? ? 'pid' : params[:type].to_s
+    params[:type].blank? ? 'creation_time_ms' : params[:type].to_s
   end
 
   def order_sort
-    params[:sort].to_s == 'ASC' ? 'DESC' : 'ASC'
+    params[:sort].to_s == 'DESC' ? 'ASC' : 'DESC'
   end
 end
