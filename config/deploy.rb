@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
-set :application, 'app'
+set :application, 'get_pokeiv'
 set :repo_url, 'git@github.com:ccclin/get_pokeiv.git'
 
 # Default branch is :master
@@ -9,6 +9,7 @@ set :repo_url, 'git@github.com:ccclin/get_pokeiv.git'
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, "/home/deploy/app/"
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -24,7 +25,7 @@ set :repo_url, 'git@github.com:ccclin/get_pokeiv.git'
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_files, 'config/database.yml', 'config/secrets.yml', 'config/cable.yml', '.env'
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
