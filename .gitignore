@@ -56,3 +56,8 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# confing yaml
+config/database.yml
+config/secrets.yml
+config/cable.yml
