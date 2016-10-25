@@ -20,7 +20,7 @@ var HomeIndex = React.createClass({
     }).join('&');
 
     return (
-      <div className="main ui masthead vertical segment">
+      <div className="ui main masthead vertical segment">
         <div className="ui center aligned header" style={{display: this.props.alert ? '' : 'none'}}>
           <div className="ui negative message">
             <div className="header">
