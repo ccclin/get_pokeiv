@@ -72,8 +72,8 @@ gem 'awesome_rails_console'
 # frontend
 gem 'react-rails'
 # gem 'bootstrap-sass'
-gem 'font-awesome-rails'
-gem 'semantic-ui-sass'
+# gem 'font-awesome-rails'
+# gem 'semantic-ui-sass'
 
 # api
 gem 'rabl'
