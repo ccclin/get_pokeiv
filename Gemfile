@@ -84,3 +84,5 @@ gem 'redis', '~>3.2'
 gem 'redis-activesupport'
 
 gem 'active_hash'
+
+gem 'sidekiq'
